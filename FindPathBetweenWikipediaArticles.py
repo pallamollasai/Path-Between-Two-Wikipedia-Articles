@@ -10,6 +10,7 @@ temp_src=""
 src = dict()
 dest = dict()
 
+a=[]
 """
 firs  i will insert both source and destination into dictionaries
 as keys and their links as values. After that Now each value will be stored as keys and its links are stored 
@@ -107,6 +108,7 @@ while(j!=1):
     html = urlopen(url)
     bs = BeautifulSoup(html, "lxml")
     links = bs.findAll("a" , href = re.compile("/wiki/[A-Za-z]"))  
+    
     
     """
         removing all the unnecessary links like footer,catlinks etc.  
